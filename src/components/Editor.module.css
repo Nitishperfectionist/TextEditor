@@ -1,0 +1,119 @@
+.textEditorHeading {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+}
+
+.selectorDivWrapper {
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+  margin: auto;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.selectorDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggleSwitch {
+  width: 60px;
+  height: 30px;
+  background-color: #cccccc;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.switch {
+  width: 28px;
+  height: 28px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.2s;
+}
+
+.toggleSwitch .on {
+  transform: translateX(30px);
+  background-color: #07a70c;
+}
+
+.toggleSwitch .off {
+  transform: translateX(0);
+}
+
+.editor {
+  border: 1px solid #ccccccfa;
+  padding: 15px;
+  min-height: 50vh;
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.bottomButtons {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.bottomButtons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff0015;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.bottomButtons button:hover {
+  background-color: #1200b3;
+}
+
+@media screen and (max-width: 768px) {
+  .selectorDivWrapper {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px;
+  }
+  
+  .toggleSwitch {
+    width: 50px;
+    height: 25px;
+  }
+
+  .toggleSwitch .on {
+    transform: translateX(25px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .textEditorHeading {
+    font-size: 1.5rem;
+  }
+
+  .selectorDivWrapper {
+    gap: 5px;
+  }
+
+  .toggleSwitch {
+    width: 40px;
+    height: 20px;
+  }
+
+  .toggleSwitch .on {
+    transform: translateX(20px);
+  }
+}
